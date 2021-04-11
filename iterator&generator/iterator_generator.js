@@ -107,8 +107,6 @@
 // }
 
 
-
-
 /////////////symbol iterator//////////////////////////
 // var arr = [10, 22, 35]
 // let _iterate = arr[Symbol.iterator]();
