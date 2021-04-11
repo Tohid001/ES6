@@ -1,5 +1,5 @@
 var obj = { a: 10, b: 20, c: 30 };
-let entries = Object.entries(obj);
+let entries = Object.values(obj);
 let length = entries.length;
 
 Object.prototype[Symbol.iterator] = function () {
@@ -21,7 +21,5 @@ console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
-
-for (let pair of obj) {
-  console.log(pair);
-}
+let arr = [...obj];
+console.log(arr);
