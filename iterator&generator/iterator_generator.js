@@ -360,3 +360,13 @@
 // let r = new Rectangle("Green", 4, 5);
 // console.log(r)
 // r.draw();
+let a = { a: 10 },
+  b = { b: 20 };
+let set = new Set([a, b]);
+
+a = null;
+
+console.log(set);
+
+let arr = [...set.values()];
+console.log(arr);
