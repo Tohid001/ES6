@@ -42,7 +42,6 @@
 // }
 // console.log(...range(1, 50000, 2));
 
-
 ////////////////////////////////custom iterator 3(sumit)////////////////////////////////
 // var obj = { a: 10, b: 20, c: 30 };
 // let entries = Object.values(obj);
@@ -106,7 +105,6 @@
 //   console.log(value); //[ 'a', 10 ] [ 'b', 20 ] [ 'c', 30 ]
 // }
 
-
 /////////////symbol iterator//////////////////////////
 // var arr = [10, 22, 35]
 // let _iterate = arr[Symbol.iterator]();
@@ -151,36 +149,6 @@
 // console.log(iterateObject.next());
 // console.log(iterateObject.next());
 ////////////////////////////////////////////////////////////////
-
-[Symbol.iterator]: function* () {
-    let currentValue = this.start
-    while (currentValue <= this.end) {
-        yield currentValue++
-    }
-}
-}
-
-for (let v of obj) {
-    console.log(v)
-}
-
-function* generate() {
-    yield 1
-    yield 2
-    yield 3
-}
-
-function* generate(collection) {
-    for (let i = 0; i < collection.length; i++) {
-        yield collection[i]
-    }
-}
-
-let it = generate(arr)
-console.log(it.next())
-console.log(it.next())
-console.log(it.next())
-console.log(it.next())
 
 // function isIterable(obj) {
 //     return typeof obj[Symbol.iterator] === 'function'
@@ -255,18 +223,6 @@ console.log(it.next())
 
 // let arr = [...set]
 // console.log(arr[0])
-
-// let weakSet = new WeakSet([a, b])
-// a = null
-// console.log(weakSet.has(b))
-
-// let weakMap = new WeakMap([[a, 45], [b, 75]])
-
-// a = null
-
-// console.log(weakMap.get(a))
-// console.log(weakMap.has(a))
-// console.log(weakMap.has(b))
 
 // class Rectangle {
 //   constructor(width, height) {
