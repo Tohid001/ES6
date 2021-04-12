@@ -40,17 +40,6 @@ let key = Object.getOwnPropertySymbols(c1)[1];
 console.log(c1[key]);
 
 /////////////////////////////////////////////
-// let map = new Map();
-// map.set("a", 10).set("b", 20);
-// console.log(map);
-// console.log(map.get("a"));
-// console.log(map.has("a"));
-// console.log(map.keys());
-// console.log(map.values());
-// console.log(map.entries());
-// console.log(map.join("*"));
-// let arr = [1, 2, 3];
-// console.log(arr.join("2"));
 //////////////////////////////////////Weakmap/////////////////////////////
 const _radius = new WeakMap();
 const _name = new WeakMap();
