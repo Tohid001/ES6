@@ -27,4 +27,4 @@
 // );
 // console.log(difference); //Set(2) { 10, 50 }
 //////////////////
-let set5 = new Set([1, 2, "s", { a: 10 }]); //Set(4) { 1, 2, 's', { a: 10 } }
+// let set5 = new Set([1, 2, "s", { a: 10 }]); //Set(4) { 1, 2, 's', { a: 10 } }
