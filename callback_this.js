@@ -23,3 +23,18 @@
 //   },
 // };
 // obj2.func();
+
+//////////
+// function func(f) {
+//   f();
+// }
+// let obj = {
+//   x: 10,
+//   y: function () {
+//     console.log(this.x);
+//   },
+//   z() {
+//     func(this.y.bind(this));
+//   },
+// };
+// obj.z();
