@@ -1,18 +1,18 @@
-// let obj = {
-//     a: 10,
-//     b: 100,
-//     [Symbol.iterator]: function* () {
-//       let current = this.a;
-//       while (current <= this.b) {
-//         yield current;
-//         current++;
-//       }
-//     },
-//   };
-//   let arr = [...obj];
-//   let newObj = { ...obj };
-//   console.log(arr);
-//   console.log(newObj);
+let obj = {
+  a: 10,
+  b: 100,
+  [Symbol.iterator]: function* () {
+    let current = this.a;
+    while (current <= this.b) {
+      yield current;
+      current++;
+    }
+  },
+};
+let arr = [...obj];
+let newObj = { ...obj };
+console.log(arr);
+console.log(newObj);
 
 // let obj = { a: 10, b: 20, c: 30 };
 // function* generator(obj) {
