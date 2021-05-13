@@ -5,12 +5,8 @@ const promiseArray = [
 ];
 
 async function asyncFunction(arr) {
-  const res1 = await Promise.all(arr);
-  const res2 = await Promise.all(
-    res1.map((v) => {
-      return v.json();
-    })
-  );
+  const res1 = await Promise.race(arr);
+  const res2 = await res1.json();
   console.log(res2);
 }
 
