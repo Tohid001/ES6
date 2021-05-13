@@ -18,6 +18,6 @@ const promiseArray = [
   getData("https://jsonplaceholder.typicode.com/posts/10"),
   getData("https://jsonplaceholder.typicode.com/posts/3"),
 ];
-Promise.all(promiseArray).then((arr) => {
-  console.log(arr);
+Promise.race(promiseArray).then((fastetsResponse) => {
+  console.log(fastetsResponse);
 });
