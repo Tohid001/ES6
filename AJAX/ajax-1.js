@@ -1,25 +1,23 @@
-const getRequest = (url) => {
-  return (promise = new Promise((resolve, reject) => {
+function getData(url) {
+  return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.send();
-    xhr.onreadystatechange = (e) => {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          const users = JSON.parse(xhr.response);
-          resolve(users);
-        } else {
-          reject(xhr.status);
-        }
+    xhr.onload = () => {
+      if (xhr.response) {
+        resolve(JSON.parse(xhr.response));
+      } else {
+        reject("Failed!");
       }
     };
-  }));
-};
-
-getRequest("https://jsonplaceholder.typicode.com/todos")
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => {
-    console.log(err);
   });
+}
+
+const promiseArray = [
+  getData("https://jsonplaceholder.typicode.com/posts"),
+  getData("https://jsonplaceholder.typicode.com/posts/10"),
+  getData("https://jsonplaceholder.typicode.com/posts/3"),
+];
+Promise.all(promiseArray).then((arr) => {
+  console.log(arr);
+});
