@@ -13,11 +13,9 @@ function getData(url) {
   });
 }
 
-const promiseArray = [
-  getData("https://jsonplaceholder.typicode.com/posts"),
-  getData("https://jsonplaceholder.typicode.com/posts/10"),
-  getData("https://jsonplaceholder.typicode.com/posts/3"),
-];
-Promise.race(promiseArray).then((fastetsResponse) => {
-  console.log(fastetsResponse);
-});
+async function asyncFunction(url) {
+  const res = await getData(url);
+  console.log(res);
+}
+
+asyncFunction("https://jsonplaceholder.typicode.com/todos/1");
